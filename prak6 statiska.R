@@ -1,0 +1,32 @@
+summary(iris)
+head(iris)
+by(iris$Petal.Length, iris$Species, summary)
+mean(iris$Sepal.Length)
+var(iris$Sepal.Length)
+boxplot(iris$Petal.Length)
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length", xlab="Species", ylab="Length")
+
+hist(iris$Petal.Length)
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+d=density(iris$Petal.Length)
+plot(d)
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+
+install.packages("ggplot2")
+library(ggplot2)
+data_tommy=read.csv("C:/Kuliah/Semester 2/DirectMarketing - DirectMarketing.csv")
+qplot(data_tommy$AmountSpent, data_tommy$Salary)
+plot(data_tommy$AmountSpent, data_tommy$Salary)
+
+DirectMarketing = read.delim("clipboard")
+hist(DirectMarketing$AmountSpent)
+d=density(DirectMarketing$AmountSpent)
+plot(d)
+
+library(ggplot2)
+data_tommy1=read.csv("C:/Kuliah/Semester 2/houseprice1.csv")
+qplot(data_tommy1$Price, data_tommy1$Bathrooms)
+plot(data_tommy1$Price, data_tommy1$Bathrooms)
+
